@@ -26,3 +26,26 @@ AWS Polly enables developers to add natural-sounding speech to applications. SSM
    ```bash
    git clone https://github.com/yourusername/aws-polly-ssml-speech-synthesis.git
    cd aws-polly-ssml-speech-synthesis
+   ```
+2. Install dependencies:
+   ```bash
+   pip install boto3
+   ```
+
+3. Configure AWS CLI for Polly:
+   ```bash
+   aws configure
+   ```
+
+### Usage
+
+1. **Prepare Your SSML File**: Customize the `ssml-example.xml` file with SSML tags such as `<say-as>` and `<emphasis>` to control pronunciation. You can find examples in the `examples/ssml-text-sample.txt`.
+
+2. **Run the Python Script**:
+   Use `scripts/polly_ssml_example.py` to convert your SSML text into speech and save it as an MP3 file.
+   ```bash
+   python scripts/polly_ssml_example.py
+   ```
+
+3. **Test the Output**:
+   The script will generate an audio file (`audio-output-sample.mp3`) for playback. Adjust SSML tags as needed to refine speech output.
